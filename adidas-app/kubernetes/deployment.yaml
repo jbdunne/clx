@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adidas-shoes-app
+  labels:
+    app: adidas-shoes-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: adidas-shoes-app
+  template:
+    metadata:
+      labels:
+        app: adidas-shoes-app
+    spec:
+      containers:
+      - name: adidas-shoes-app
+        image: 607678727710.dkr.ecr.us-west-2.amazonaws.com/adidas-shoes-app:latest
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
