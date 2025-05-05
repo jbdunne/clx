@@ -1,0 +1,28 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  coralogix:
+    private_key: "keygoeshere"
+    application_name: "otel-demo"
+    subsystem_name: "otel-demo-subsystem"
+    domain: "api.cx498.coralogix.com"
+    timeout: 30s
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [coralogix]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [coralogix]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [coralogix]
