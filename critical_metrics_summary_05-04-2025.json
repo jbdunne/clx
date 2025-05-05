@@ -1,0 +1,336 @@
+{
+  "id": "46U8oUlEEsjOkL4034vbM",
+  "name": "Critical Metrics Summary",
+  "description": "Adidas Metrics",
+  "layout": {
+    "sections": [
+      {
+        "id": {
+          "value": "a4a62aa7-0633-4533-a31d-6992cf54da9d"
+        },
+        "rows": [
+          {
+            "id": {
+              "value": "e5c9e989-48e7-45fc-abd4-d9f7bb069d4b"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "a8ef7611-1ea7-467d-a2a7-69c006af8266"
+                },
+                "title": "Node Exporter",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "84bb0581-dd5d-4f08-9316-fdddd1a89428",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "node_cpu_seconds_total"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              },
+              {
+                "id": {
+                  "value": "5b0295e6-fc6d-4870-aff1-e40eda97889e"
+                },
+                "title": "Go GC",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "6d770b82-1932-4fc7-9a0b-ecec80e45df8",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "go_gc_duration_seconds"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": {
+              "value": "67b63822-6288-44d2-8a9d-e6a6bac35851"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "38ac8924-211d-4bf8-beeb-9abab36ecf59"
+                },
+                "title": "Samples Scraped",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "975d6b13-8a53-4ce1-b28d-23d6594d6430",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "scrape_samples_scraped"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              },
+              {
+                "id": {
+                  "value": "d0162ba9-8d7c-4f9e-91be-4be54e35d578"
+                },
+                "title": "CX Alerts",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "adf03ff7-5f5f-4bd2-9e5e-1a73bf8811df",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "cx_alerts"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": {
+              "value": "553e0254-510b-461e-b6ea-36efeb01a48b"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "c16043b9-8801-49c0-a492-f7623cbdbc75"
+                },
+                "title": "Alloc Bytes",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "a70801a2-d6c3-440a-ab97-9581d4a5bcb6",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "go_memstats_alloc_bytes"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              },
+              {
+                "id": {
+                  "value": "bf4ea6f0-c4ff-4b11-98aa-202c7aa3cd63"
+                },
+                "title": "Malloc",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "6825c2ac-e985-4538-82e7-c91f3f7baf08",
+                        "query": {
+                          "metrics": {
+                            "promqlQuery": {
+                              "value": "go_memstats_mallocs_total"
+                            },
+                            "filters": [],
+                            "editorMode": "METRICS_QUERY_EDITOR_MODE_BUILDER"
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query #1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "options": {
+          "internal": {}
+        }
+      }
+    ]
+  },
+  "variables": [],
+  "filters": [],
+  "relativeTimeFrame": "86400s",
+  "annotations": [],
+  "off": {}
+}

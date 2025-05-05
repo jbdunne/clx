@@ -1,0 +1,279 @@
+{
+  "id": "POeKzb4cJG9ibS5XuNxe3",
+  "name": "Production Readiness Dashboard",
+  "layout": {
+    "sections": [
+      {
+        "id": {
+          "value": "a51af1ef-15c6-47e8-a183-04c18772e1ed"
+        },
+        "rows": [
+          {
+            "id": {
+              "value": "d1251a52-d274-4120-bcce-32150ff1a4c8"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "c5ef20b5-943e-4d37-a4f7-838f5f8dfe12"
+                },
+                "title": "Log Count",
+                "definition": {
+                  "lineChart": {
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "tooltip": {
+                      "showLabels": false,
+                      "type": "TOOLTIP_TYPE_ALL"
+                    },
+                    "queryDefinitions": [
+                      {
+                        "id": "379b9c0d-1090-4483-85a1-a90de5330cd0",
+                        "query": {
+                          "logs": {
+                            "groupBy": [],
+                            "aggregations": [
+                              {
+                                "count": {}
+                              }
+                            ],
+                            "filters": [],
+                            "groupBys": []
+                          }
+                        },
+                        "seriesCountLimit": "20",
+                        "unit": "UNIT_UNSPECIFIED",
+                        "scaleType": "SCALE_TYPE_LINEAR",
+                        "name": "Query 1",
+                        "isVisible": true,
+                        "colorScheme": "classic",
+                        "resolution": {
+                          "bucketsPresented": 96
+                        },
+                        "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                        "customUnit": "",
+                        "decimal": 2
+                      }
+                    ],
+                    "stackedLine": "STACKED_LINE_UNSPECIFIED"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": {
+              "value": "5ee669a8-7526-415e-b1a7-7085fa881811"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "30a2b4c8-e080-4ddf-9f28-009c7e0745d6"
+                },
+                "title": "Gauge of Errors in Production",
+                "definition": {
+                  "gauge": {
+                    "query": {
+                      "logs": {
+                        "luceneQuery": {
+                          "value": ""
+                        },
+                        "logsAggregation": {
+                          "count": {}
+                        },
+                        "aggregation": "AGGREGATION_UNSPECIFIED",
+                        "filters": [],
+                        "groupBy": []
+                      }
+                    },
+                    "min": 0,
+                    "max": 100,
+                    "showInnerArc": true,
+                    "showOuterArc": true,
+                    "unit": "UNIT_NUMBER",
+                    "thresholds": [
+                      {
+                        "from": 0,
+                        "color": "var(--c-severity-log-verbose)"
+                      },
+                      {
+                        "from": 33,
+                        "color": "var(--c-severity-log-warning)"
+                      },
+                      {
+                        "from": 66,
+                        "color": "var(--c-severity-log-error)"
+                      }
+                    ],
+                    "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                    "thresholdBy": "THRESHOLD_BY_UNSPECIFIED",
+                    "customUnit": "",
+                    "decimal": 2,
+                    "thresholdType": "THRESHOLD_TYPE_RELATIVE",
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "legendBy": "LEGEND_BY_GROUPS",
+                    "displaySeriesName": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": {
+              "value": "f6701c8c-64d6-42ff-8967-9c743d991381"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "7a3ffc17-3256-4656-a3d5-dba2fa38628d"
+                },
+                "title": "Log Volume Comparison",
+                "definition": {
+                  "barChart": {
+                    "query": {
+                      "logs": {
+                        "luceneQuery": {
+                          "value": ""
+                        },
+                        "aggregation": {
+                          "count": {}
+                        },
+                        "filters": [],
+                        "groupNames": [],
+                        "groupNamesFields": [
+                          {
+                            "keypath": [
+                              "subsystemname"
+                            ],
+                            "scope": "DATASET_SCOPE_LABEL"
+                          }
+                        ]
+                      }
+                    },
+                    "maxBarsPerChart": 24,
+                    "stackDefinition": {
+                      "maxSlicesPerBar": 7
+                    },
+                    "scaleType": "SCALE_TYPE_LINEAR",
+                    "colorsBy": {
+                      "groupBy": {}
+                    },
+                    "xAxis": {
+                      "value": {}
+                    },
+                    "unit": "UNIT_UNSPECIFIED",
+                    "sortBy": "SORT_BY_TYPE_VALUE",
+                    "colorScheme": "classic",
+                    "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                    "barValueDisplay": "BAR_VALUE_DISPLAY_UNSPECIFIED",
+                    "customUnit": "",
+                    "decimal": 2,
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_SIDE"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": {
+              "value": "4d56a659-71fa-4de5-b628-bb2eafb1bea0"
+            },
+            "appearance": {
+              "height": 19
+            },
+            "widgets": [
+              {
+                "id": {
+                  "value": "3ce04cf8-989b-40a7-a9ea-99bef145724e"
+                },
+                "title": "Demo and Production Environments",
+                "definition": {
+                  "hexagon": {
+                    "query": {
+                      "logs": {
+                        "luceneQuery": {
+                          "value": ""
+                        },
+                        "logsAggregation": {
+                          "count": {}
+                        },
+                        "filters": [],
+                        "groupBy": [
+                          {
+                            "keypath": [
+                              "subsystemname"
+                            ],
+                            "scope": "DATASET_SCOPE_LABEL"
+                          }
+                        ]
+                      }
+                    },
+                    "min": 0,
+                    "max": 100,
+                    "unit": "UNIT_UNSPECIFIED",
+                    "thresholds": [
+                      {
+                        "from": 0,
+                        "color": "var(--c-severity-log-verbose)"
+                      },
+                      {
+                        "from": 33,
+                        "color": "var(--c-severity-log-warning)"
+                      },
+                      {
+                        "from": 66,
+                        "color": "var(--c-severity-log-error)"
+                      }
+                    ],
+                    "dataModeType": "DATA_MODE_TYPE_HIGH_UNSPECIFIED",
+                    "customUnit": "",
+                    "decimal": 2,
+                    "thresholdType": "THRESHOLD_TYPE_RELATIVE",
+                    "legend": {
+                      "isVisible": true,
+                      "columns": [],
+                      "groupByQuery": true,
+                      "placement": "LEGEND_PLACEMENT_AUTO"
+                    },
+                    "legendBy": "LEGEND_BY_GROUPS"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "options": {
+          "internal": {}
+        }
+      }
+    ]
+  },
+  "variables": [],
+  "filters": [],
+  "relativeTimeFrame": "900s",
+  "annotations": [],
+  "off": {}
+}
